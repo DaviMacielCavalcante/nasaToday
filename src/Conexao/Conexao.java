@@ -18,7 +18,6 @@ import java.net.http.HttpResponse;
  *
  * @author Davi Maciel Cavalcante
  */
-
 public class Conexao {
 
     private HttpClient cliente;

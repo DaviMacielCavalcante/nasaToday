@@ -10,6 +10,13 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Classe responsável por criar e salvar
+ * as respostas obtidas no froamto JSON.
+ *
+ *
+ * @author Davi Maciel Cavalcante
+ */
 public class GeradorJson {
 
     public static <T> void salvarJson(T jsons) {
