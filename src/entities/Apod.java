@@ -11,6 +11,9 @@ public class Apod {
     @SerializedName("url")
     private String url;
 
+    public Apod() {
+    }
+
     public Apod(ApodJson apod) {
         this.data = apod.date();
         this.titulo = apod.title();

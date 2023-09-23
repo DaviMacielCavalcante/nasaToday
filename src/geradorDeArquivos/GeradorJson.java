@@ -15,7 +15,7 @@ public class GeradorJson {
     public static <T> void salvarJson(T jsons) {
         LocalDate data = LocalDate.now();
 
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
         String dataFormatada = data.format(formato);
 
@@ -23,11 +23,11 @@ public class GeradorJson {
 
         if (jsons instanceof Apod) {
             try {
-                String caminhoDiretorioApod = "C:\\Users\\Davi\\Documents\\GitHub\\nasaToday\\files\\apod";
+                String caminhoDiretorioApod = "C:\\Users\\Davi\\Documents\\GitHub\\nasaToday\\apod";
 
                 File diretorio = new File(caminhoDiretorioApod);
 
-                nomeArquivo += dataFormatada + "-" + "apod.json";
+                nomeArquivo = caminhoDiretorioApod + "\\" + dataFormatada + "-" + "apod.json";
 
                 if (!(diretorio.exists())) {
 

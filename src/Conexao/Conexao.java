@@ -48,11 +48,11 @@ public class Conexao {
         return resposta;
     }
 
-    public <T> Object respostaEmJson(T entidade) {
+    public <T> Object respostaEmJson(int opcao) {
         String resposta = null;
         resposta = resposta().body();
-        Gson gson = new GsonBuilder().setFieldNamingStrategy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).setPrettyPrinting().create();
-        if (entidade instanceof ApodJson) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        if (opcao == 1) {
             ApodJson respostaNaoFinalizada = gson.fromJson(resposta, ApodJson.class);
             Apod respostaFinalizada = new Apod(respostaNaoFinalizada);
             return respostaFinalizada;
